@@ -62,6 +62,7 @@ var arr = [["Kyong Nevels","9396 Shipley St. Daphne, AL 36526"],
 		   ["Pasty Pavlik","750 Oakland Road Harlingen, TX 78552"]]
 
 
+
 var PromisePool = require('es6-promise-pool')
 
 var counter = 0
@@ -84,7 +85,7 @@ var promiseProducer = function () {
 	}
 }
 
-var pool = new PromisePool(promiseProducer, 5)
+var pool = new PromisePool(promiseProducer, require('events').EventEmitter.defaultMaxListeners-1)
 
 pool.start()
 .then(function () {
