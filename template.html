@@ -4,89 +4,61 @@
 	<title>Student's profile</title>
 	<head>
 	<style type="text/css">
+
+	    @font-face {
+		    font-family: 'Gabriola';
+		    font-style: normal;
+		    font-weight: normal;
+		    src: local('Gabriola'), url('./gabriola-cufonfonts-webfont/gabriola.woff') format('woff');
+	    }
+
 		body{
-			width: 1200px;
-			margin: 0;
-			padding: 0px;
-			font-size: 16px;
-			line-height: 24px;
-			font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
-			color: rgb(33,33,33);
+			width: 7.25in;
+			height: 5.25in;
+			font-size: 40px;
+			font-family:'Gabriola';
+			display: flex;
+    		align-items: center;
+    		margin: 0;
+    		padding: 0;
 		}
-		.report-header{
-			background: rgb(55,39,114);
-			color: rgb(255,255,255);
-			padding: 15px;
-			padding-left: 200px;
-			box-sizing: border-box;
-			display: block;
-			position: relative;
-		}
-		.report-header .logo{
+
+		.sender {
 			position: absolute;
-			top: 40px;
-			left: 15px;
-			width: 150px;
+			top:2%;
+			left:10px;
+			width: 30vh;
+    		line-height: 1em;
 		}
-		.report-footer{
-			background: rgb(55,39,114);
-			color: rgb(255,255,255);
-			padding: 15px;
-			box-sizing: border-box;
+
+		.receipient {
+			position:absolute; 
+			top:40%;
+			text-align: center;
+			left: 0;
+			right: 0;
+			margin: auto
+		}
+
+		.receipient_address {
 			display: block;
-			position: relative;
+			margin-left: auto;
+			margin-right: auto;
+			/*width: 50%;*/
+			text-align: center;]
 		}
-		.report-body{
-			width: 70%;
-			display: inline-block;
-			position: relative;
-			padding: 15px;
-			box-sizing: border-box;
-			vertical-align: top;
-		}
-		.report-photo{
-			width: 28%;
-			display: inline-block;
-			position: relative;
-			vertical-align: top;
-			box-sizing: border-box;
-			margin-top: 15px;
-		}
-		.report-photo img{
-			width: 100%;
-		}
-		.report-body .info p{
-			border: rgb(204,204,204) solid 1px;
-			padding: 5px;
-			display: block;
-			position: relative;
-		}
+
 	</style>
 	<meta charset="utf-8">
 </head>
 <body>
-	<div class="report-header">
-		<img src="https://www.activfirst.co.uk/wp-content/uploads/logo-example.jpg" class="logo">
-		<h3>{{title}}</h3>
-		<p>{{date}}</p>
+	<div class="sender">
+		<div class="sender_name">John Doe and Mary Jane</div>
+		<div class="sender_address">3614 Reserve St Minden ON Canada K0M 2K0</div>
 	</div>
-	<div class="report-body">
-		<div class="info">
-			<p>Student: {{name}}</p>
-			<p>OEN: {{oen}}</p>
-			<p>Age: {{age}}</p>
-			<p>Birthdate: {{birthdate}}</p>
-			<p>Course: {{course}}</p>
-		</div>
-		<div class="obs">
-			<p>Obs: {{obs}}</p>
-		</div>
-	</div>
-	<div class="report-photo">
-		<img src="https://avatars1.githubusercontent.com/u/16254838?s=460&v=4">
-	</div>
-	<div class="report-footer">
-		A generic Company - All Rights reserved.
+	<div class="receipient">
+		<div class="receipient_name">{{firstname}}</div>
+  		<div class="receipient_address">{{address}}</div>
 	</div>
 </body>
 </html>
